@@ -94,7 +94,7 @@ if(updateTodo){
 
 })
 //Delete Todo From Database
-git
+
 app.delete("/deleteTodos/:id", async(req,res)=>{
     const {id}=req.params;
     const deleteTodo= await TodoModel.findByIdAndDelete({_id:id})
