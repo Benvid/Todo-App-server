@@ -7,12 +7,13 @@ import TodoModel from "./TodoSchema/todoSchema.js"
 const app = express()
 
 dotenv.config()
-app.use(cors())
 
 const port =  process.env.PORT||9000
 
 const url = process.env.DB_URL
 app.use(express.json())
+app.use(cors())
+
 mongoose.connect(url,{
     useNewUrlParser: true,
     useUnifiedTopology: true
