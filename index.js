@@ -2,7 +2,7 @@ import express from "express"
 import mongoose from "mongoose"
 import dotenv from "dotenv"
 import cors from "cors"
-import TodoModel from "./TodoSchema/todoSchema.js"
+import TodoModel from "./todoSchema/todoSchema.js"
 
 const app = express()
 
@@ -58,7 +58,7 @@ app.post("/createTodo",async(req,res)=>{
         isCompleted
     })
     if(createTodo){
-        return res.status(201).json({
+        return res.status(200).json({
             message:"Todo created successfully",
             data: createTodo
         
